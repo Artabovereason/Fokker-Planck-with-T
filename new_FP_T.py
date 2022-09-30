@@ -10,8 +10,7 @@ start_time = time.time()
 sns.set()
 
 
-data       = {'x':physics.list_x}
-df         = pd.DataFrame(data)
+
 step_space = 0.025
 step_time  = 0.001
 step_vel   = np.sqrt(2*step_time)+0.0001#0.04
@@ -25,6 +24,8 @@ numt       = int(tmax/step_time   )
 list_x     = np.linspace(-xmax,+xmax,num=numx)
 list_v     = np.linspace(-vmax,+vmax,num=numv)
 list_t     = np.linspace(    0,+tmax,num=numt)
+data       = {'x':list_x}
+df         = pd.DataFrame(data)
 
 def potential_duffing(x,t):
     if x<-1:
