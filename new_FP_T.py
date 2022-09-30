@@ -66,7 +66,7 @@ density_integrated_v = np.zeros((numt,numx))
 normalisation_time   = np.zeros(numt)
 
 
-for tind in range(numt):
+for tind in range(numt-1):
     start_time = time.time()
     density_fixed_x = np.zeros((numx,numv))
     for xind in range(numx):
